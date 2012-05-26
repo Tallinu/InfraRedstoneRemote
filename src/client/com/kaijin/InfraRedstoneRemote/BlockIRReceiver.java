@@ -6,7 +6,7 @@ public class BlockIRReceiver extends Block
 {
     public BlockIRReceiver(int i, int j)
     {
-        super(i, j, Material.ground);
+        super(i, j, Material.iron);
     }
 
     @Override
@@ -32,6 +32,7 @@ public class BlockIRReceiver extends Block
      */
     public boolean isIndirectlyPoweringTo(World blocks, int x, int y, int z, int side)
     {
+        // TODO: Make this only power in directions parallel to the surface it's attached to?
         TileEntity tile = blocks.getBlockTileEntity(x, y, z);
         if (tile instanceof TileReceiver)
         {
@@ -45,6 +46,7 @@ public class BlockIRReceiver extends Block
      */
     public boolean isPoweringTo(IBlockAccess blocks, int x, int y, int z, int side)
     {
+        // TODO: Make this only return true for the block it's attached to, so it acts like levers/buttons.
         TileEntity tile = blocks.getBlockTileEntity(x, y, z);
         if (tile instanceof TileReceiver)
         {
@@ -82,6 +84,7 @@ public class BlockIRReceiver extends Block
                 // Prevent GUI pop-up
                 if (player.isSneaking())
                 {
+                    // TODO: Not sure if it'll have a GUI yet. Perhaps to configure how long it turns on for?
                     return false;
                 }
             }
