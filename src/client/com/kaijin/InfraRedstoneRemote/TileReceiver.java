@@ -60,14 +60,14 @@ public class TileReceiver extends TileEntity
                 {
                     // Turn off power and request block update
                     powerOn = false;
-                    worldObj.markBlockNeedsUpdate(xCoord, yCoord, zCoord);
+                    worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
                 }
             }
             else
             {
                 // Previously inactive; turn on and request a block update
                 powerOn = true;
-                worldObj.markBlockNeedsUpdate(xCoord, yCoord, zCoord);
+                worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
             }
         }
     }
