@@ -32,7 +32,7 @@ public class TileReceiver extends TileEntity
 
         // Check if the player is wielding a remote.
         ItemStack item = player.getCurrentEquippedItem();
-        if (item != null && item.itemID == mod_InfraRedstone.IRRemoteItemID)
+        if (item != null && item.itemID == InfraRedstoneRemote.IRRemoteItemID)
         {
             // Use a longer than normal distance test.
             return player.getDistanceSq((double)xCoord + 0.5D, (double)yCoord + 0.5D, (double)zCoord + 0.5D) <= interactDistSq;

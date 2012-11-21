@@ -28,13 +28,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "InfraRedstoneRemote", name = "InfraRedstoneRemote", version = "a.1", dependencies = "")
 @NetworkMod(clientSideRequired = true, channels = {"IRRemote"}, packetHandler = PacketHandler.class)
-public class mod_InfraRedstone implements IGuiHandler
+public class InfraRedstoneRemote implements IGuiHandler
 {
 	@SidedProxy(clientSide = "com.kaijin.InfraRedstoneRemote.ClientProxy", serverSide = "com.kaijin.InfraRedstoneRemote.CommonProxy")
 	public static CommonProxy proxy;
 
 	@Instance("InfraRedstoneRemote")
-	public static mod_InfraRedstone instance;
+	public static InfraRedstoneRemote instance;
 
 	public static int IRReceiverBlockID = 248;
 	public static int IRRemoteItemID = 31109;
