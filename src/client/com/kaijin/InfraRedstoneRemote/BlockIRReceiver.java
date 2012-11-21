@@ -16,7 +16,7 @@ public class BlockIRReceiver extends Block
     }
 
     @Override
-    public TileEntity getTileEntity(int metadata)
+    public TileEntity createTileEntity(World world, int metadata)
     {
         return new TileReceiver();
     }
@@ -66,7 +66,7 @@ public class BlockIRReceiver extends Block
     }
 
     @Override
-    public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player)
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9)
     {
         TileEntity tile = world.getBlockTileEntity(x, y, z);
         if (tile instanceof TileReceiver)
