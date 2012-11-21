@@ -37,7 +37,7 @@ public class mod_InfraRedstone implements IGuiHandler
 	public static mod_InfraRedstone instance;
 
 	public static int IRReceiverBlockID = 248;
-	public static int IRRemoteItemID = 32109;
+	public static int IRRemoteItemID = 31109;
 
 	public static final Block IRReceiver = new BlockIRReceiver(IRReceiverBlockID, 0).setHardness(0.5F).setResistance(5F).setStepSound(Block.soundStoneFootstep).setBlockName("IRReceiver");
 	public static final Item IRRemote = new ItemIRRemote(IRRemoteItemID);
